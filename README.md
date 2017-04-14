@@ -1,8 +1,8 @@
 # DotFiles
 
-1. Clone reop to `~/`
+1. Clone repo to `~/`
   ```
-  git clone git@github.com:mamodom/.files.git
+  git clone git@github.com:wovalle/.files.git
   ```
 
 2. Add symbolic link to `.gitconfig`
@@ -22,15 +22,3 @@
   ```
   sudo apt-get install xsel
   ```
-
-5. Install [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
-
-  ```
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  ```
-  
-6. Add symbolic link to `.vimrc`
-  ```
-  ln -s ~/.files/dotvimrc ~/.vimrc
-  ```
-7. Launch `vim` and run `:PluginInstall`

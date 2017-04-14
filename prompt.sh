@@ -19,19 +19,12 @@ prompt_function() {
 
   PS1="${BLUE}\u${RESET}:${GRAY}$AWS_ENVIRONMENT${git_color}$(__git_ps1)${YELLOW}\w${RESET}\$ "
 
-  # Adds $AWS_ENVIRONMENT and $TERMINAL_COMMENT to the terminal title
-  if [ -z "$AWS_ENVIRONMENT" ]; then
-    awsenv=""
-  else
-    awsenv=" : $AWS_ENVIRONMENT"
-  fi
-
   if [ -z "$TERMINAL_COMMENT" ]; then
     comment=""
   else
     comment=" ($TERMINAL_COMMENT)"
   fi
 
-  echo -ne "\033]0;${PWD##*/}$comment$awsenv\007"
+  echo -ne "\033]0;${PWD##*/}$comment\007"
 }
 PROMPT_COMMAND=prompt_function
