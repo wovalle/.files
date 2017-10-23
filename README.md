@@ -38,7 +38,10 @@ ln -s ~/.files/dotbash_aliases ~/.bash_aliases
 ## Apps section
 
 ```bash
+#Required
 sudo apt install curl
+sudo apt-get install build-essential
+
 
 #CopyQ
 sudo add-apt-repository ppa:hluk/copyq
