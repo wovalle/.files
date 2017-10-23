@@ -54,7 +54,7 @@ sudo snap install telegram-sergiusens
 sudo snap install --classic vscode
 ```
 
-Adding npm completion
+* Adding npm completion
 ```bash
 npm completion | sudo tee $(sudo find / -name 'bash_completion.d' 2>/dev/null)/npm 1> /dev/null
 ```
