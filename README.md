@@ -30,8 +30,9 @@ chmod 400 ~/.ssh/id_rsa
 Open a terminal and `xcode-select --install`. This should also install `git` (in case it doesn't, it can be easily installed after installing homebrew with `brew install git`).
 
 ## Show hidden files
-open 
-`cmd + 
+ 
+<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd>
+
 ## Install [oh-my-szh]()
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
