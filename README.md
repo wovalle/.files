@@ -1,7 +1,15 @@
-# DotFiles 
-* Create a new ssh key
+# wovalle's dotfiles 
+ install vscode in path
+ install font
+ hidden files
+
+## Setup SSH
+Either create a new key or copy an old one
+<details>
+  <summary>Create a new ssh key</summary>
+
 ```bash
-ssh-keygen -t rsa -b 4096 -C "willyovalle16@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "<email@domain.tld>"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
@@ -11,62 +19,68 @@ ssh-add ~/.ssh/id_rsa
 sudo apt-get install xclip
 cat ~/.ssh/id_rsa.pub | xclip -sel clip
 ```
+</details>
 
-* Install git
+If you're using and old key, remember to set the correct permissions
 ```bash
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update 
-sudo apt install git
+chmod 400 ~/.ssh/id_rsa
 ```
 
-* Clone the config repo to `~/`
+## Install XCode Command Line Tools
+Open a terminal and `xcode-select --install`. This should also install `git` (in case it doesn't, it can be easily installed after installing homebrew with `brew install git`).
+
+## Show hidden files
+open 
+`cmd + 
+## Install [oh-my-szh]()
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## Clone this repo to your home folder
 ```bash
 cd ~/ && git clone git@github.com:wovalle/.files.git
+
 ```
 
-* Copy .gitconfig
+## Link .gitconfig
 ```bash
-ln -s ~/.files/dotgitconfig ~/.gitconfig
+cd ~/ && ln -s ~/.files/dotgitconfig ~/.gitconfig
 ```
 
-* Copy .bash_aliases
+## Link aliases
 ```bash
-ln -s ~/.files/dotbash_aliases ~/.bash_aliases
-. ~/.bash_aliases #Sourcing bash aliases
+cd ~/ && ln -s ~/.files/aliases.zsh ~/.oh-my-zsh/custom/
+source ~/.zshrc
 ```
 
-## Apps section
+## Install [Homebrew](https://brew.sh)
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+
+## Apps 
 
 ```bash
-#Required
-sudo apt install curl
-sudo apt-get install build-essential
+brew install --cask visual-studio-code
+brew install fnm
+brew install --cask docker 
+brew install --cask spotify 
+brew install --cask rectangle 
+brew install --cask slack
+brew install --cask telegram
+brew install --cask maccy
+brew install --cask google-chrome
+brew install --cask docker
+brew install --cask wireguard
+brew install --cask mounty
 
 
-#CopyQ
-sudo add-apt-repository ppa:hluk/copyq
-sudo apt update
-sudo apt install copyq
-ln -s ~/.files/copyq.conf ~/.config/copyq/copyq.conf #copy copyq configuration
-
-#nvm (https://github.com/creationix/nvm)
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-nvm install node #latest node version
-
-sudo snap install telegram-sergiusens
-sudo snap install --classic vscode
-
-#Spotify
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
-echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update
-sudo apt-get install spotify-client
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
 ```
 
-* Adding npm completion
-```bash
-npm completion | sudo tee $(sudo find / -name 'bash_completion.d' 2>/dev/null)/npm 1> /dev/null
-```
 
 
 
