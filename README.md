@@ -76,7 +76,8 @@ brew install --cask google-chrome
 brew install --cask docker
 brew install --cask wireguard
 brew install --cask mounty
-
+brew install --cask 1password
+brew install --cask xbar
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
