@@ -77,7 +77,9 @@ brew install --cask docker
 brew install --cask wireguard
 brew install --cask mounty
 brew install --cask 1password
-brew install --cask xbar
+brew install --cask the-unarchiver
+brew install --cask notion
+brew install --cask hiddenbar
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
