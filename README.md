@@ -33,26 +33,34 @@ Open a terminal and `xcode-select --install`. This should also install `git` (in
  
 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd>
 
-## Install [oh-my-szh]()
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
 
 ## Clone this repo to your home folder
 ```bash
-cd ~/ && git clone git@github.com:wovalle/.files.git
+cd ~/ && git clone git@github.com:wovalle/.files.git && cd .files
+```
+
+## Install [oh-my-szh](https://github.com/ohmyzsh/ohmyzsh)
+```bash
+curl -fsSL -o omz.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+
+SH="$HOME/.files/oh-my-zsh" sh omz.sh
+```
+## Link dot files
+```bash
+mv ~/.zshrc ~/.zshrc.bak
+
+
+ln -s ~/.files/dotzshrc ~/.zshrc
+ln -s ~/.files/dotgitconfig ~/.gitconfig
+ln -s ~/.files/aliases.zsh ~/.files/oh-my-zsh/custom/
 
 ```
 
-## Link .gitconfig
+## Install [zsh-completions](https://github.com/zsh-users/zsh-completions)
 ```bash
-cd ~/ && ln -s ~/.files/dotgitconfig ~/.gitconfig
-```
-
-## Link aliases
-```bash
-cd ~/ && ln -s ~/.files/aliases.zsh ~/.oh-my-zsh/custom/
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM}/plugins/zsh-completions
 source ~/.zshrc
+
 ```
 
 ## Install [Homebrew](https://brew.sh)
@@ -79,6 +87,7 @@ brew install --cask mounty
 brew install --cask 1password
 brew install --cask the-unarchiver
 brew install --cask notion
+brew install --cask sloth
 brew install --cask hiddenbar
 
 brew tap homebrew/cask-fonts
