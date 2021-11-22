@@ -56,9 +56,9 @@ ln -s ~/.files/aliases.zsh ~/.files/oh-my-zsh/custom/
 
 ```
 
-## Install [zsh-completions](https://github.com/zsh-users/zsh-completions)
+## Install [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete)
 ```bash
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM}/plugins/zsh-completions
+git clone git@github.com:marlonrichert/zsh-autocomplete ${ZSH_CUSTOM}/plugins/zsh-autocomplete
 source ~/.zshrc
 
 ```
