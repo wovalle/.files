@@ -32,3 +32,4 @@
 	email = willyovalle16@gmail.com
 [core]
   editor = vim
+  ignorecase = false
