@@ -19,6 +19,7 @@
     forget = "revert --no-commit"
 [push]
 	default = simple
+	autoSetupRemote = true
 [pull]
 	default = simple
 [help]
@@ -33,3 +34,4 @@
 [core]
   editor = vim
   ignorecase = false
+	autocrlf = input
