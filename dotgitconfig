@@ -18,7 +18,7 @@
     patch = "apply --ignore-space-change --ignore-whitespace"
     forget = "revert --no-commit"
 [push]
-	default = simple
+	default = upstream
 	autoSetupRemote = true
 [pull]
 	default = simple
